@@ -34,6 +34,12 @@ ul > li {
 
 li > a {
   text-decoration: none;
+  transition: font-size 1s, color 2s;
+}
+
+li > a:hover {
+  font-size: 32px;
+  color: white;
 }
 /* Navigation Bar End*/
 
@@ -69,7 +75,7 @@ li > a {
       hsla(0, 0%, 20%, 0.6) 20%,
       hsla(0, 0%, 20%, 0.6) 20%
     ),
-    url('./images/home-page-header.jpg');
+    url('./images/about-me-banner.jpeg');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -83,7 +89,7 @@ li > a {
       hsla(0, 0%, 20%, 0.6) 20%,
       hsla(0, 0%, 20%, 0.6) 20%
     ),
-    url('./images/home-page-header.jpg');
+    url('./images/contact-banner.jpeg');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,13 +97,14 @@ li > a {
 }
 
 .shop-page-banner-image {
+  border-bottom: 2px solid black;
   height: 400px;
   background-image: linear-gradient(
       90deg,
       hsla(0, 0%, 20%, 0.6) 20%,
       hsla(0, 0%, 20%, 0.6) 20%
     ),
-    url('./images/home-page-header.jpg');
+    url('./images/shop-banner.jpeg');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -176,12 +183,36 @@ li > a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.form-button {
+  margin: 0 auto;
 }
 
 .icon {
   font-size: 60px;
   margin: 20px 0;
+}
+
+.icon:hover {
+  animation-name: icon-rotation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes icon-rotation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 /* Contact Body End */
@@ -196,13 +227,13 @@ li > a {
   padding: 10px 20px;
   letter-spacing: 1.2px;
   line-height: 1.4;
-  max-width: 900px;
+  max-width: 960px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.content-container > li {
+.shop-page-content-container > li {
   list-style: none;
 }
 
@@ -213,10 +244,19 @@ li > img {
   height: 300px;
   object-fit: cover;
   vertical-align: bottom;
+  transition: width 2s, box-shadow 2s;
 }
+
+li > img:hover {
+  width: 220px;
+
+  box-shadow: 0px 0px 140px 26px rgba(0, 0, 0, 0.57);
+}
+
 li > p {
   text-align: center;
 }
+
 /* Shop Body End */
 
 /* Footer Start */
@@ -230,7 +270,7 @@ footer {
   margin: 0;
   padding: 5px 5px;
   font-size: 30px;
-  border: 1px solid white;
+  border-top: 1px solid rgb(0, 0, 0);
   list-style: none;
   width: 100%;
   display: flex;
@@ -253,5 +293,11 @@ footer {
 
   .homepage-banner-image {
     height: 200px;
+  }
+
+  footer > p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
   }
 }
