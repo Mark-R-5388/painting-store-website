@@ -1,57 +1,60 @@
-//Slide Show
-const leftBtn = document.querySelector(".image-slid-show-left-btn");
-const rightBtn = document.querySelector(".image-slid-show-right-btn");
-const slideShow = document.querySelector(".image-slide-show-container");
-const playSlideShow = document.querySelector(".play-image-slide");
-const images = document.querySelectorAll(".img");
-
-let slideShowPictures = [
-  "./images/slide-show-1.png",
-  "./images/slide-show-2.png",
-  "./images/slide-show-3.png",
-  "./images/slide-show-4.png",
+//SlideShow
+const [nextButton, previousButton, current] = [
+  document.querySelector(".next-button"),
+  document.querySelector(".previous-button"),
+  document.querySelector("#current"),
 ];
 
-let imageEl = document.createElement("img");
-let i = 0;
-imageEl.src = slideShowPictures[i];
-imageEl.alt = `picture ${i}`;
-slideShow.append(imageEl);
+const imgs = [
+  { id: 0, src: "./images/scroller/Black Sands.JPG", alt: "black sands" },
+  { id: 1, src: "./images/scroller/BlueCrush.JPG", alt: "blue crush" },
+  { id: 2, src: "./images/scroller/Dark2Light3.jpg", alt: "dark2light" },
+  { id: 3, src: "./images/scroller/Kimono2.jpg", alt: "kimono" },
+];
+const opacity = 0.6;
+let id = 0;
+// imgs[0].style.opacity = opacity;
 
-leftBtn.addEventListener("click", (e) => {
-  i -= 1;
-  if (i < 0) {
-    i = 3;
+current.src = imgs[0].src;
+
+nextButton.addEventListener("click", () => {
+  id++;
+  if (id > 3) {
+    id = 0;
   }
-  imageEl.src = slideShowPictures[i];
-  imageEl.alt = `picture ${i}`;
-  slideShow.append(imageEl);
+  current.src = imgs[id].src;
+  current.classList.add("fade-in");
+  setTimeout(() => {
+    current.classList.remove("fade-in");
+  }, 500);
 });
 
-rightBtn.addEventListener("click", (e) => {
-  i += 1;
-  if (i > 3) {
-    i = 0;
+previousButton.addEventListener("click", () => {
+  id--;
+  if (id < 0) {
+    id = 3;
   }
-  imageEl.src = slideShowPictures[i];
-  imageEl.alt = `picture ${i}`;
-  slideShow.append(imageEl);
+  current.src = imgs[id].src;
+  current.classList.add("fade-in");
+  setTimeout(() => {
+    current.classList.remove("fade-in");
+  }, 500);
 });
+// imgs.forEach((img) => {
+//   img.addEventListener("click", imageClick);
+// });
 
-//Link Scroll
+// function imageClick(e) {
+//   imgs.forEach((img) => (img.style.opacity = 1));
 
-function scrollToItem(num) {
-  window.scrollTo(0, num);
-}
+//   current.src = e.target.src;
 
-document.querySelector(".gallery-index").addEventListener("click", (e) => {
-  scrollToItem(1460);
-});
+//   current.classList.add("fade-in");
+//   setTimeout(() => {
+//     current.classList.remove("fade-in");
+//   }, 500);
 
-document.querySelector(".about-index").addEventListener("click", (e) => {
-  scrollToItem(520);
-});
+//   e.target.style.opacity = opacity;
+// }
 
-document.querySelector(".contact-index").addEventListener("click", (e) => {
-  scrollToItem(2252);
-});
+//Modal Section
