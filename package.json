@@ -1,0 +1,15 @@
+{
+  "name": "alexnewwebsitelaunch",
+  "version": "1.0.0",
+  "description": "Website created for an artist showcasing her artwork",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mark-R-5388/painting-store-website.git"
+  },
+  "author": "mark rose",
+  "license": "ISC"
+}

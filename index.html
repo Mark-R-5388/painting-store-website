@@ -4,132 +4,154 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script
+      src="https://kit.fontawesome.com/9b2aeeef0e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>AMVulpone</title>
   </head>
   <body>
-    <div class="main-container">
+    <div id="top-link" class="main-container">
+      <!-- NavBar Start -->
       <div class="header">
-        <!-- Nav Bar Start-->
-        <nav class="navbar">
+        <!-- Navigation Links Start-->
+        <div class="navbar">
           <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#techniques">Techniques</a>
           <a class="nav-link" href="#gallery">Gallery</a>
           <a class="nav-link" href="#contact">Contact</a>
-        </nav>
-        <!-- Nav Bar End-->
+        </div>
+        <!-- Navigation links End-->
+        <!-- logo start -->
+        <div class="logo-container">
+          <a href="#top-link" class="top">
+            <h1 class="logo">AMV Designs</h1>
+          </a>
+        </div>
+        <!-- logo end -->
+      </div>
+      <!-- NavBar End -->
+
+      <!-- <div class="content"> -->
+      <!-- SlideShow Start -->
+
+      <div class="slideshow-container">
+        <div class="main-img">
+          <img
+            src="./images/slider/Dark2Light3.jpg"
+            alt="Dark 2 Light"
+            id="current"
+          />
+        </div>
+        <div class="slideshow-button-container">
+          <button class="btn previous-button">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="btn play-button"><i class="fas fa-play"></i></button>
+          <button class="btn stop-button"><i class="fas fa-stop"></i></button>
+          <button class="btn next-button">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
 
-      <div class="content">
-        <!-- SlideShow Start -->
-        <div class="container">
-          <div class="main-img">
-            <img
-              src="./images/scroller/Black Sands.JPG"
-              alt="Black Sands"
-              id="current"
-            />
-          </div>
-          <button class="previous-button"><|</button>
-          <button class="next-button">|></button>
+      <!-- SlideShow End -->
 
-          <!-- <div class="imgs">
-            <img src="./images/scroller/BlueCrush.JPG" alt="bluecrush" />
-            <img src="./images/scroller/Dark2Light3.jpg" alt="dark2light" />
-
-            <img src="./images/scroller/Kimono2.jpg" alt="kimono" />
-          </div> -->
-        </div>
-
-        <!-- SlideShow End -->
-
-        <!-- About Section Start -->
-        <div id="about" class="about-section">
+      <!-- About Section Start -->
+      <div id="about" class="about-section-container">
+        <div class="about-img">
           <img src="./images/AboutMe Opt1.JPG" alt="Alexandria Vulpone" />
-          <div class="text-section">
-            <h2>This is me!</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-              cupiditate aperiam perspiciatis nam soluta tenetur? Quo at porro
-              exercitationem excepturi, deleniti rerum dicta. Dolorem, cum!
-            </p>
+        </div>
+        <div class="about-text-section">
+          <h2>Creator of AMV Designs</h2>
+          <p>
+            Hello! Welcome to my fluid art webpage! I am a licensed interior
+            designer, artist and fitness enthusiast. I've been an artist since I
+            was a young girl, and have developed a passion for fluid artistry,
+            which is abstract painting. I use my eye for design and presentation
+            to soften and allow my natural creative abilities to flow through
+            the paint mediums. Since I'm always looking to express a wide range
+            of skills, techniques and styles; I'm open to exploring and growing
+            as an artist - therefore I will continue to develop my craft. I hope
+            you enjoy my work! Please contact me for artwork you see on here, as
+            well as, commissioned pieces. Everything you see is original. No two
+            paintings are the same. If the piece you see is no longer available;
+            I can use the same colors and technique to create a similar vibe and
+            effect. Since all paintings are abstract your painting will be like
+            no other! Thank you for taking a look at my designs and please
+            spread this along to your friends and family!
+            <br />
+            Have a blessed day,
+            <br />
+            Alexandria
+          </p>
+        </div>
+      </div>
+      <!-- About Section End -->
+
+      <!-- Gallery Start -->
+      <div id="gallery" class="gallery-container"></div>
+      <!-- Gallery End -->
+
+      <!-- Contact Start -->
+
+      <div id="contact" class="contact-container">
+        <form
+          action="https://formsubmit.co/"
+          method="POST"
+          class="form contact-form"
+        >
+          <input type="hidden" name="_subject" value="New Email" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://amvdesigns.net/thankyoupage.html"
+          />
+          <label for="contact-form" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-input"
+            name="name"
+            placeholder="First and Last Name"
+            required
+          />
+
+          <label for="contact-form" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-input"
+            name="email"
+            placeholder="youremail@wherever.com"
+            required
+          />
+
+          <label for="contact-form" class="form-label"
+            >Inquire for a personal piece</label
+          >
+          <textarea name="text" class="form-textarea" required></textarea>
+          <input type="submit" value="submit" class="btn form-btn" />
+        </form>
+        <div class="social-media-container">
+          <div class="social-media-icon">
+            <a
+              href="https://www.instagram.com/alex.vulpone.art/"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
-        <!-- About Section End -->
-
-        <!-- Pour Types Section Start -->
-        <section id="techniques" class="pour-techniques-section">
-          <h2>Pour 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequuntur error nihil sunt eius totam velit autem asperiores eos
-            accusantium neque ipsa minus optio ad delectus, laudantium molestiae
-            id corrupti labore?
-          </p>
-
-          <h2>Pour 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-            distinctio assumenda officia ipsa asperiores ut natus nemo fugiat
-            autem aspernatur quis expedita ad eos qui eligendi adipisci, sit
-            sequi ducimus.
-          </p>
-
-          <h2>Pour 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aut,
-            culpa nobis iusto labore harum saepe fugit in quasi? Ex, facere
-            doloremque fuga voluptates expedita magnam animi ducimus possimus
-            sint.
-          </p>
-        </section>
-        <!-- Pour Types Section End -->
-
-        <!-- Gallery Start -->
-        <div id="gallery" class="gallery-container">
-          <img src="./images/gallery/Continental Drifts.JPG" alt="" />
-          <img src="./images/gallery/GoldRush.JPG" alt="" />
-          <img src="./images/gallery/Graphiti Blue.JPG" alt="" />
-          <img src="./images/gallery/octopus.JPG" alt="" />
-          <img src="./images/gallery/parrot1.JPG" alt="" />
-          <img src="./images/gallery/Queen.JPG" alt="" />
-          <img src="./images/gallery/Ribbons1.jpg" alt="" />
-          <img src="./images/gallery/RosePetals2.jpg" alt="" />
-          <img src="./images/gallery/RustyRainbowPatina1.JPG" alt="" />
-          <img src="./images/gallery/Spumoni3.JPG" alt="" />
-          <img src="./images/gallery/StreamOfConsc4.JPG" alt="" />
-        </div>
-        <!-- Gallery End -->
-
-        <!-- Contact Start -->
-        <section id="contact" class="contact-section">
-          <form class="form-section">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" />
-
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" />
-
-            <label for="email">Email Address</label>
-            <input type="email" />
-
-            <label for="inquiry">Request a personal Piece</label>
-            <textarea id="inquiry" name="inquiry" rows="3" cols="30"></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </section>
-        <!-- Contact End -->
-      </div>
-
-      <!-- Footer Start -->
-      <div class="footer">
-        <footer class="footer-section">
-          <h3>Alexandria Vulpone &copy;2021</h3>
-        </footer>
-        <!-- Footer End -->
       </div>
     </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="footer">
+      <div class="footer-text">
+        <h3>Alexandria Vulpone &copy;2021</h3>
+      </div>
+    </div>
+    <!-- Footer End -->
+
     <script src="./script.js"></script>
   </body>
 </html>
